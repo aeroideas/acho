@@ -1,0 +1,649 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden
+    
+  }
+  
+  /* Landing Page Container */
+  .landing-page {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 100vh;
+
+  }
+  
+  /* Background GIF */
+  .background-gif {
+    position: absolute;
+    background: url("https://s3-alpha-sig.figma.com/img/f092/3e52/8795ab869b6335f2f2990f6b6279eede?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=L6GyU64RHs0QSMmG9b6DlFzKheDIKCACZQiKRPthatZpP3~rPdUH8q9-TzmVqDw94dI0YTAu0wxGJGMVblyp3HruPWhyB-i5b-sw5WBS0-2Etxn~33ZB4K2upCDSEiGDgmUz6FlE-QzNue1DgSTLD8jCipWdumztg2XWhQ9wL3RlFVESxz2kRZj0pprPB63IYuu1hVrPhRY6w7SWfIU9RQsuc-U6SAXGf4c2G--ja6yKBhJ-qmPeBnqM3Ai7tGx0u8cyaS6cSUp1seLEFkx6w-spNJiD2hb-9LtDqr-VEvWLcGPS6Ub5vH7CmH-fBX3WAerj6LO0EYzD5jZVz0eRBQ__") no-repeat center center/cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+  }
+  
+  /* Content Wrapper */
+  .content {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 100px;
+    width: 100%;
+    padding: 30px ;
+  }
+  
+  /* Left Side */
+  .left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .vertical-division {
+    margin: 10px 0;
+    color: white;
+    width: 50%;
+
+  }
+  
+  .vertical-division h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .vertical-division p {
+    font-size: 1rem;
+  }
+
+  /* Default horizontal line styles */
+.divider-line {
+  margin: 0 0 10px 0;
+  border: none;
+  border-top: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+/* Hover effect */
+.vertical-division:hover {
+  background-color: gray; /* Light blue background */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
+}
+
+.vertical-division:hover .divider-line {
+  border-top: 4px solid #007bff; /* Change line to blue */
+  
+}
+  
+  /* Right Side */
+  .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 20px;
+    color: white;
+  }
+  
+  .right-side h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .right-side p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-side, .right-side {
+      flex: none;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .right-side h1 {
+      font-size: 1.5rem;
+    }
+  
+    .right-side p {
+      font-size: 1rem;
+    }
+  
+    .cta-button {
+      font-size: 0.9rem;
+    }
+
+  }
+  
+
+  /* Offerings Section */
+.offerings-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light gray background */
+  width: 100%; 
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111; /* Dark text for the title */
+}
+
+/* Offering Layout */
+.offering {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0; /* Divider line between offerings */
+}
+
+.offering-text {
+  flex: 1;
+  text-align: left;
+}
+
+.offering-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222; /* Stronger text for title */
+}
+
+.offering-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555; /* Softer text for description */
+}
+
+.learn-more-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff; /* Blue button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.offering-image {
+  flex: 1;
+  text-align: right;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow around image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .offering {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offering-text,
+  .offering-image {
+    text-align: center;
+  }
+
+  .offering-title {
+    font-size: 1.5rem;
+  }
+
+  .offering-description {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Mobile Application Section */
+.mobile-app-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #12132d; /* Dark background to match the theme */
+  width: 100%; 
+}
+
+.mobile-app {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.mobile-app-image {
+  flex: 1;
+}
+
+.mobile-app-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the image */
+}
+
+.mobile-app-text {
+  flex: 1;
+  color: white;
+  padding-left: 20px;
+}
+
+.mobile-app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mobile-app-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.learn-more-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design for Mobile Application Section */
+@media (max-width: 768px) {
+  .mobile-app {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-app-image,
+  .mobile-app-text {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .mobile-app-title {
+    font-size: 2rem;
+  }
+
+  .mobile-app-description {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* Analytics Platform Section */
+/* Analytics Platform Section */
+.analytics-platform-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* White background to match the clean design */
+  width: 100%; 
+}
+
+.analytics-platform {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.analytics-text {
+  flex: 1;
+  color: #111928; /* Dark text for the description */
+  padding-left: 20px;
+}
+
+.analytics-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1F2A37; /* Dark title text color */
+}
+
+.analytics-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555; /* Softer text for the description */
+}
+
+.analytics-platform-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #1F2A37;
+  background-color: #FFFFFF;
+  border: 2px solid gray; /* Border color matching the text */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.analytics-platform-button:hover {
+  background-color: #1F2A37; /* Dark background on hover */
+  color: white; /* White text on hover */
+}
+
+.analytics-image {
+  flex: 1;
+}
+
+.analytics-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the image */
+}
+
+/* Responsive Design for Analytics Platform Section */
+@media (max-width: 768px) {
+  .analytics-platform {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .analytics-text,
+  .analytics-image {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .analytics-title {
+    font-size: 2rem;
+  }
+
+  .analytics-description {
+    font-size: 1rem;
+  }
+}
+
+
+/* Features Section */
+.features{
+  background-color: #f9fafb;
+  width: 100%; 
+
+}
+.features-section {
+  padding: 100px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+  max-width: 1200px; /* Restricts the section width */
+  margin: 0 auto; /* Centers the section */
+}
+
+.features-title {
+  font-size: 2.5rem;
+  color: #111827;
+  text-align: center;
+  margin-bottom: 80px;
+  font-weight: bold;  
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 30px; /* Spacing between cards */
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left; /* Align text content to the left */
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.feature-badge {
+  display: inline-block;
+  background: #34d399;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.feature-heading {
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 20px;
+}
+
+.feature-link {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.feature-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}
+
+
+
+/* General Contact Page Styling */
+.contact-page {
+  background-color: #111828; /* Dark background */
+  color: white; /* Light text for contrast */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Header: Title and Description */
+.contact-header {
+  margin-bottom: 30px;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d5db; /* Softer text color for description */
+  margin: 0 auto;
+  max-width: 1000px; /* Keeps description centered and compact */
+}
+
+/* Form Container */
+.contact-container {
+  background-color: #1f2937; /* Slightly lighter background for the form */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #374151;
+  border-radius: 5px;
+  background-color: #1e293b;
+  color: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+textarea.form-input {
+  resize: none;
+  height: 100px;
+}
+
+/* Privacy Note */
+.privacy-note {
+  font-size: 0.9rem;
+  color: #9ca3af; /* Muted text */
+}
+
+.privacy-link {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.contact-submit-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #3b82f6; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-submit-button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+}
+
+
+
+.landing-page,
+.offerings-section,
+.mobile-app-section,
+.analytics-platform-section {
+    width: 100%;
+    overflow: hidden; /* Prevent overflowing content */
+}
+
+
+
+
+
+
+

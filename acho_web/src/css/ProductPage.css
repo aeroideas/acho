@@ -1,0 +1,389 @@
+/* General styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex; /* Flex container for horizontal layout */
+  flex-direction: row; /* Arrange sections side by side */
+  scroll-behavior: smooth; /* Smooth horizontal scrolling */
+}
+
+/* Section Styles */
+section {
+  width: 100vw; /* Each section takes up 100% of viewport width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-shrink: 0; /* Prevent sections from shrinking */
+}
+
+/* Landing Section */
+.landing-section {
+  background-image: url("https://s3-alpha-sig.figma.com/img/2312/c855/f1151ad6101c52c0bc54fddb830c0c4f?Expires=1733702400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ei7pzg8eKrPd13cvRqA70Eg5QC8FKQHM3tNXO2RXvcS28ekUcfJItw4bdHDHjyCg3dIAmb1oAxRpU9HWBCjGX4cUOSfR5klg1PJOq0jJ0AmhvqnY-ZUiwKvsnC1K6A03J~i5sNBgSmeB-IlizDTzgjsmJmXjTkDvDVQ6ASEx9tkH4wICfcJ~o5WRV0O6ik99JtJHWY~oM~2Bks6qT6SqKHxex246ChgGuDgiKmr6SMBVCBGMHDpNRpEeSAPEV~p7QgXMM20WUVLl-Cmg61-WHBXATVcBhMrYn-DInwuy8B4M6aj4er4OpM7vxOV~-mET67NfXiCYK7ktJdDrarRGtg__");
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding :20px;
+}
+
+.landing-content {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.landing-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.landing-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.landing-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #0056b3;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.secondary-btn:hover {
+  background-color: white;
+  color: #007bff;
+}
+
+/* Offerings Section */
+.offerings-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9; /* Light gray background */
+  width: 100vw; 
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #111; /* Dark text for the title */
+}
+
+/* Offering Layout */
+.offering {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0; /* Divider line between offerings */
+}
+
+.offering-text {
+  flex: 1;
+  text-align: left;
+}
+
+.offering-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222; /* Stronger text for title */
+}
+
+.offering-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #555; /* Softer text for description */
+}
+
+.learn-more-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff; /* Blue button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.offering-image {
+  flex: 1;
+  text-align: right;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow around image */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .offering {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offering-text,
+  .offering-image {
+    text-align: center;
+  }
+
+  .offering-title {
+    font-size: 1.5rem;
+  }
+
+  .offering-description {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Mobile Application Section */
+.mobile-app-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #12132d; /* Dark background to match the theme */
+  width: 100vw; 
+}
+
+.mobile-app {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.mobile-app-image {
+  flex: 1;
+}
+
+.mobile-app-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow for the image */
+}
+
+.mobile-app-text {
+  flex: 1;
+  color: white;
+  padding-left: 20px;
+}
+
+.mobile-app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mobile-app-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.learn-more-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design for Mobile Application Section */
+@media (max-width: 768px) {
+  .mobile-app {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mobile-app-image,
+  .mobile-app-text {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .mobile-app-title {
+    font-size: 2rem;
+  }
+
+  .mobile-app-description {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* General Contact Page Styling */
+.contact-page {
+  background-color: #111828; /* Dark background */
+  color: white; /* Light text for contrast */
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Header: Title and Description */
+.contact-header {
+  margin-bottom: 30px;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contact-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d1d5db; /* Softer text color for description */
+  margin: 0 auto;
+  max-width: 1000px; /* Keeps description centered and compact */
+}
+
+/* Form Container */
+.contact-container {
+  background-color: #1f2937; /* Slightly lighter background for the form */
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #374151;
+  border-radius: 5px;
+  background-color: #1e293b;
+  color: white;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+textarea.form-input {
+  resize: none;
+  height: 100px;
+}
+
+/* Privacy Note */
+.privacy-note {
+  font-size: 0.9rem;
+  color: #9ca3af; /* Muted text */
+}
+
+.privacy-link {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
+/* Submit Button */
+.contact-submit-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #3b82f6; /* Blue button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-submit-button:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    font-size: 1rem;
+  }
+}
